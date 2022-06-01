@@ -19,7 +19,13 @@ module.exports = {
     async details (req, res){
         const produtos = await Produto.findById(req.params.id);
         return res.json(produtos);
+    },
+
+    async update (req, res){
+        const produtos = await Produto.findByIdAndUpdate(req.params.id, req.body, { new: true});
+        return res.json(produtos);
     }
+
 
 
 }
