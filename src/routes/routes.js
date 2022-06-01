@@ -11,4 +11,6 @@ routes.get('/produtos/:id', produtoController.details);
 
 routes.put('/produtos/:id', produtoController.update);
 
+routes.delete('/produtos/:id', produtoController.delete);
+
 module.exports = routes;
